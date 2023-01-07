@@ -42,7 +42,7 @@ if (binToStr(substr($signature, 0, strlen($signature) - (strlen($signature) % 8)
     exit();
 }
 
-if (binToStr(substr($signature, 0, strlen($signature) - (strlen($signature) % 8))) != '<0b>') {
+if (binToStr(substr($signature, 0, 32)) !== '<0b>') {
     unlink($location);
     echo "err_signature";
     exit();
@@ -50,8 +50,8 @@ if (binToStr(substr($signature, 0, strlen($signature) - (strlen($signature) % 8)
 
 
 // RECUPERER LA LONGUEUR DU TEXTE
-$longueur = substr($signature, -(strlen($signature) % 8));
-$bit = 33/3;
+$longueur = substr($signature, 32);
+$bit = 22;
 
 while (true) {
     $pixel = imagecolorat($img, $bit % $width, (int)($bit / $width));
