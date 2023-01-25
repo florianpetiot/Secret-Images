@@ -4,7 +4,7 @@
 <p align="center">
 <img src="ressources/thumbnail.png" alt="thumbnail" width="75%"/>
 </p>
-<p align="center">démonstration avec tout les inputs actifs</p>
+<p align="center">Démonstration avec tous les inputs actifs</p>
 
 ## projet en cours ⏳
 
